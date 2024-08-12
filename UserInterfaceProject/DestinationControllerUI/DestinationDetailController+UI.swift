@@ -7,7 +7,19 @@
 
 import Foundation
 extension DestinationDetailController {
-    func initViews() {
+    func setValues() {
+        if let unwrappedViewModel = self.viewModel {
+            imageContainer.image = unwrappedViewModel.getImage()
+            placeNameLabel.text = unwrappedViewModel.getPlaceName()
+            locationName.text = unwrappedViewModel.getLocationString()
+            ratingLabel.text = "\(unwrappedViewModel.getRating())"
+            time.text = unwrappedViewModel.getTime()
+            weatherStatus.text = unwrappedViewModel.getweather()
+            descriptionAboutPlace.text = unwrappedViewModel.getAbout()
+            tripTotalCost.text = unwrappedViewModel.getPrice()
+        }
+    }
+     func initViews() {
         let guide = view.safeAreaLayoutGuide
         view.backgroundColor = .white
         view.addSubview(imageContainer)

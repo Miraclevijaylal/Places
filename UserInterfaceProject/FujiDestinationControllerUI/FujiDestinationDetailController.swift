@@ -1,16 +1,16 @@
 //
-//  DestinationDetailController.swift
+//  FujiDestinationDetailController.swift
 //  UserInterfaceProject
 //
-//  Created by Vijay Lal on 27/07/24.
+//  Created by Vijay Lal on 07/08/24.
 //
 
 import Foundation
 import UIKit
-class DestinationDetailController: UIViewController {
+class FujiDestinationDetailController: UIViewController {
     lazy var imageContainer: UIImageView = {
         let imageContainer = UIImageView()
-        imageContainer.image = UIImage(named: "placeImage")
+        imageContainer.image = UIImage(named: "Fuji")
         imageContainer.contentMode = .scaleAspectFill
         imageContainer.clipsToBounds = true
         imageContainer.layer.cornerRadius = 26
@@ -23,7 +23,7 @@ class DestinationDetailController: UIViewController {
         view.layer.cornerRadius = 22
         view.layer.masksToBounds = true
         view.isUserInteractionEnabled = true
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backButtonPressed)))
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goBackButtonPressed)))
         return view
     }()
     lazy var backButtonImage: UIImageView = {
@@ -56,7 +56,7 @@ class DestinationDetailController: UIViewController {
     }()
     lazy var placeNameLabel: UILabel = {
         let placeNameLabel = UILabel()
-        placeNameLabel.text = "Andes Mountain"
+        placeNameLabel.text = "Mount Fuji, Tokyo"
         placeNameLabel.font = UIFont(name: "Inter-Regular", size: 24)
         placeNameLabel.textColor = .white
         return placeNameLabel
@@ -102,7 +102,7 @@ class DestinationDetailController: UIViewController {
     }()
     lazy var time:UILabel = {
         let time = UILabel()
-        time.text = "8 hours"
+        time.text = "10 hours"
         time.textColor = UIColor(red: 0.49, green: 0.49, blue: 0.49, alpha: 1.00)
         time.font = UIFont(name: "Roboto-Light", size: 18)
         return time
@@ -126,7 +126,7 @@ class DestinationDetailController: UIViewController {
     }()
     lazy var locationName: UILabel = {
         let locationName = UILabel()
-        locationName.text = "South, America"
+        locationName.text = "Tokyo, Japan"
         locationName.font = UIFont(name: "Roboto-Light", size: 18)
         locationName.textColor = UIColor(red: 0.79, green: 0.78, blue: 0.78, alpha: 1.00)
         return locationName
@@ -140,14 +140,14 @@ class DestinationDetailController: UIViewController {
     }()
     lazy var tripTotalCost: UILabel = {
         let totalCost = UILabel()
-        totalCost.text = "$230"
+        totalCost.text = "$330"
         totalCost.font = UIFont(name: "Roboto-Light", size: 20)
         totalCost.textColor = UIColor(red: 0.79, green: 0.78, blue: 0.78, alpha: 1.00)
         return totalCost
     }()
     lazy var weatherStatus: UILabel = {
         let weatherStatus = UILabel()
-        weatherStatus.text = "16C"
+        weatherStatus.text = "10°C"
         weatherStatus.textColor = UIColor(red: 0.49, green: 0.49, blue: 0.49, alpha: 1.00)
         weatherStatus.font = UIFont(name: "Roboto-Light", size: 18)
         return weatherStatus
@@ -167,13 +167,14 @@ class DestinationDetailController: UIViewController {
     }()
     lazy var ratingLabel: UILabel = {
         let ratingLabel = UILabel()
-        ratingLabel.text = "4.5"
+        ratingLabel.text = "4.8"
+        ratingLabel.textColor = UIColor(red: 0.49, green: 0.49, blue: 0.49, alpha: 1.00)
         ratingLabel.font = UIFont(name: "Roboto-Light", size: 18)
         return ratingLabel
     }()
     lazy var descriptionAboutPlace: UILabel = {
         let descriptionAboutPlace = UILabel()
-        descriptionAboutPlace.text = "This vast mountain range is renowned for its remarkable diversity in terms of topography and climate. It features towering peaks, active volcanoes, deep canyons, expansive plateaus, and lush valleys. The Andes are also home to "
+        descriptionAboutPlace.text = "Mount Fuji (Fujiyama), on the island on Honshu, Japan, is a classic stratovolcano. This volcano reaches 3776 meters above sea level and is noted for its steeply sloping (35° near the summit) and symmetric profile. It is often called one of the most beautiful mountains in the world."
         descriptionAboutPlace.font = UIFont(name: "Roboto-Medium", size: 18)
         descriptionAboutPlace.numberOfLines = 0
         descriptionAboutPlace.textAlignment = .justified
@@ -202,6 +203,6 @@ class DestinationDetailController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        initViews()
+        initialViews()
     }
 }

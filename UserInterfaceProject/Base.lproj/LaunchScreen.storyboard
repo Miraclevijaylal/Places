@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,33 +16,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ap-a7-bxf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LSBG" translatesAutoresizingMaskIntoConstraints="NO" id="8Ap-a7-bxf">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="To9-kO-jwS">
-                                <rect key="frame" x="155.33333333333334" y="297" width="82.666666666666657" height="33"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Your Dream Destination With Us " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ega-Dr-B2c">
-                                <rect key="frame" x="60" y="357" width="273.33333333333331" height="20.333333333333314"/>
+                                <rect key="frame" x="60" y="416" width="273.33333333333331" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="To9-kO-jwS">
+                                <rect key="frame" x="148" y="374" width="82.666666666666686" height="33"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="33"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkg-jb-cDO">
+                                <rect key="frame" x="234" y="356" width="49" height="55"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-globe-50" translatesAutoresizingMaskIntoConstraints="NO" id="AIW-5Z-puC">
+                                        <rect key="frame" x="2" y="2" width="45" height="50"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="tintColor" red="0.0" green="0.16786439980000001" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="AIW-5Z-puC" firstAttribute="top" secondItem="xkg-jb-cDO" secondAttribute="top" constant="2" id="F1c-2c-msy"/>
+                                    <constraint firstAttribute="bottom" secondItem="AIW-5Z-puC" secondAttribute="bottom" constant="3" id="hmQ-cM-Ita"/>
+                                    <constraint firstItem="AIW-5Z-puC" firstAttribute="leading" secondItem="xkg-jb-cDO" secondAttribute="leading" constant="2" id="nao-JK-zqj"/>
+                                    <constraint firstAttribute="trailing" secondItem="AIW-5Z-puC" secondAttribute="trailing" constant="2" id="yEe-SA-K7P"/>
+                                </constraints>
+                            </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="3bf-VQ-oLZ"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
-                            <constraint firstItem="ega-Dr-B2c" firstAttribute="centerX" secondItem="To9-kO-jwS" secondAttribute="centerX" id="Cm3-cu-7Iw"/>
-                            <constraint firstAttribute="trailing" secondItem="8Ap-a7-bxf" secondAttribute="trailing" id="DWG-Q4-Dwv"/>
-                            <constraint firstItem="8Ap-a7-bxf" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Kz0-Sh-973"/>
-                            <constraint firstItem="8Ap-a7-bxf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Nbl-9v-ocI"/>
-                            <constraint firstItem="To9-kO-jwS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="297" id="Ok1-ZD-yhV"/>
-                            <constraint firstItem="To9-kO-jwS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="n6z-Fe-U4F"/>
-                            <constraint firstAttribute="bottom" secondItem="8Ap-a7-bxf" secondAttribute="bottom" id="nNs-m7-4d3"/>
-                            <constraint firstItem="ega-Dr-B2c" firstAttribute="top" secondItem="To9-kO-jwS" secondAttribute="bottom" constant="27" id="tBX-ig-HaY"/>
+                            <constraint firstItem="xkg-jb-cDO" firstAttribute="top" secondItem="3bf-VQ-oLZ" secondAttribute="top" constant="297" id="Fqk-ze-npx"/>
+                            <constraint firstItem="To9-kO-jwS" firstAttribute="top" secondItem="3bf-VQ-oLZ" secondAttribute="top" constant="315" id="HBl-gy-W2O"/>
+                            <constraint firstItem="ega-Dr-B2c" firstAttribute="leading" secondItem="3bf-VQ-oLZ" secondAttribute="leading" constant="60" id="PK5-cY-j3h"/>
+                            <constraint firstItem="xkg-jb-cDO" firstAttribute="leading" secondItem="3bf-VQ-oLZ" secondAttribute="leading" constant="234" id="R0e-B2-n8J"/>
+                            <constraint firstItem="ega-Dr-B2c" firstAttribute="top" secondItem="To9-kO-jwS" secondAttribute="bottom" constant="9" id="SZs-Iv-ame"/>
+                            <constraint firstItem="3bf-VQ-oLZ" firstAttribute="trailing" secondItem="ega-Dr-B2c" secondAttribute="trailing" constant="59.666666666666686" id="Y4Y-Qa-WJ0"/>
+                            <constraint firstItem="ega-Dr-B2c" firstAttribute="top" secondItem="xkg-jb-cDO" secondAttribute="bottom" constant="5" id="dOs-Ie-35X"/>
+                            <constraint firstItem="3bf-VQ-oLZ" firstAttribute="trailing" secondItem="To9-kO-jwS" secondAttribute="trailing" constant="162.33333333333331" id="f96-0f-Ghg"/>
+                            <constraint firstItem="3bf-VQ-oLZ" firstAttribute="trailing" secondItem="xkg-jb-cDO" secondAttribute="trailing" constant="110" id="o1X-BF-0VD"/>
+                            <constraint firstItem="To9-kO-jwS" firstAttribute="leading" secondItem="3bf-VQ-oLZ" secondAttribute="leading" constant="148" id="v3S-yf-cb3"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -51,11 +70,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LSBG" width="736" height="1109"/>
+        <image name="icons8-globe-50" width="50" height="50"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="scrollViewTexturedBackgroundColor">
-            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

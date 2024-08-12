@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Custom</key>
-	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Inter-Regular.ttf</string>
@@ -13,6 +11,7 @@
 		<string>Inter-ShinBold.ttf</string>
 		<string>Inter-VariableFont_sint,wght.ttf</string>
 		<string>Roboto-Light.ttf</string>
+		<string>Montserrat-VariableFont_wght.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

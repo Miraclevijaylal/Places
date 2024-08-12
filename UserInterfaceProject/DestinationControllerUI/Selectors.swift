@@ -11,7 +11,7 @@ extension DestinationDetailController {
      print("Booked")
     }
     @objc func backButtonPressed() {
-        print("Pressed")
+        self.navigationController?.popViewController(animated: true)
     }
     @objc func archiveButtonPressed() {
         print("pressed2")
